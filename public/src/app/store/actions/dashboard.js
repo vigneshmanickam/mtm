@@ -1,0 +1,3 @@
+export const DASHBOARD_ACTION_TYPE = {
+    SET_CIVIL_TASKS: "SET_CIVIL_TASKS"
+}
