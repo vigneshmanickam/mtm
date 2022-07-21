@@ -19,7 +19,7 @@ const style = {
 const CivilTaskForm = () => {
     return (
         <div style={style}>
-            <h2 style={{textAlign: "center"}}>Kanha Mosquito<br></br> Control Department</h2>
+            <h2 style={{textAlign: "center"}}>Kanha Mosquito<br></br> Control - Civil Work</h2>
             <ZoneDropDown/>
             <LocationDropDown/>
             <IssueDetailText/>

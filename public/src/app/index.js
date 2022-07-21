@@ -4,10 +4,10 @@ import AppContainer from "./components/AppContainer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Provider} from 'react-redux';
 import rootStore from "./store/rootStore";
+import {getParamValue} from "./utils/utils";
 
 const domContainer = document.querySelector('#app');
-const url = new URL(location.href);
-const pageType = url.searchParams.get('page');
+const pageType = getParamValue("page");
 document.head.getElementsByTagName('title')[0].innerHTML = 'MTM';
 
 ReactDOM.render(

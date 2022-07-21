@@ -7,7 +7,7 @@ const initialState = {
     reportedBy: "Anand",
     issue: undefined,
     solution: undefined,
-    images: []
+    images: undefined,
 };
 
 export default function form(state = initialState, action) {
@@ -42,6 +42,11 @@ export default function form(state = initialState, action) {
             return {
                 ...state,
                 images: action.payload
+            }
+        case FORM_ACTION_TYPE.SET_IMAGES_URL:
+            return {
+                ...state,
+                image_urls: action.payload
             }
         default:
             return state;

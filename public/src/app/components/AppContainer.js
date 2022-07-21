@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {PAGE_TYPE} from "../utils/constants";
 import CivilTaskForm from "./form/CivilTaskForm";
-import ViewCivilTask from "./ViewCivilTask";
+import ViewCivilTask from "./task/ViewCivilTask";
 import '../css/app.css'
 import Dashboard from "./dashboard/Dashboard";
 

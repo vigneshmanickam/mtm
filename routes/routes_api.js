@@ -7,13 +7,14 @@ const mongoose = require("mongoose");
 routesAPI.post('/newciviltask', function (req, res) {
     if (req.body && req.body.task) {
         let newTask = new taskModel(req.body.task);
-        newTask.save(function (err) {
+        newTask.save(function (err, taskData) {
             if (err) {
                 console.error(err);
                 res.sendStatus(REQUEST_FAILED);
             } else {
-                res.send({result: true});
+                res.send({result: taskData});
             }
+            console.log()
         });
     } else {
         res.sendStatus(REQUEST_FAILED);

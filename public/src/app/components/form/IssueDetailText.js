@@ -9,7 +9,7 @@ function IssueDetailText() {
         storeDispatch({type: FORM_ACTION_TYPE.SET_ISSUE, payload: e.target.value});
     }
     return (
-        <TextArea title="Issue Details" onInput={handleOnInput}/>
+        <TextArea maxlength="200" title="Issue Details" onInput={handleOnInput}/>
     );
 }
 

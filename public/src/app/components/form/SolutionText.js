@@ -9,7 +9,7 @@ function SolutionText() {
         storeDispatch({type: FORM_ACTION_TYPE.SET_SOLUTION, payload: e.target.value});
     }
     return (
-        <TextArea title="Suggested Solution" onInput={handleOnInput}/>
+        <TextArea maxlength="200" title="Suggested Solution" onInput={handleOnInput}/>
     );
 }
 
