@@ -34,6 +34,7 @@ app.use(routesAPI);
 let {routesWeb} = require('../routes/routes_web');
 app.use(routesWeb);
 app.use("/dist", express.static(__dirname + '/../public/dist'));
+app.use("/.well-known/pki-validation/", express.static(__dirname + '/../public/well-known'));
 
 //Database Connection
 let mongoose = require('mongoose');
