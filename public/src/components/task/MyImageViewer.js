@@ -17,10 +17,10 @@ function MyImageViewer(props) {
     }
     return (images && images.length > 0) ? (
         <div style={{width: "100%"}}>
-            {images[0] ? <img style={imageStyle} crossOrigin="anonymous" src={images[0]}/> : null}
-            {images[1] ? <img style={imageStyle} crossOrigin="anonymous" src={images[1]}/> : null}
-            {images[2] ? <img style={imageStyle} crossOrigin="anonymous" src={images[2]}/> : null}
-            {images[3] ? <img style={imageStyle} crossOrigin="anonymous" src={images[3]}/> : null}
+            {images[0] ? <img style={imageStyle} crossOrigin="anonymous" src={images[0].replace("https", "http")}/> : null}
+            {images[1] ? <img style={imageStyle} crossOrigin="anonymous" src={images[1].replace("https", "http")}/> : null}
+            {images[2] ? <img style={imageStyle} crossOrigin="anonymous" src={images[2].replace("https", "http")}/> : null}
+            {images[3] ? <img style={imageStyle} crossOrigin="anonymous" src={images[3].replace("https", "http")}/> : null}
         </div>
     ) : null
 }

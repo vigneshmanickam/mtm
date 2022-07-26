@@ -1,7 +1,7 @@
 import axios from "axios";
 import {REQUEST_METHOD} from "./constants";
 
-const API_ROOT_PATH = "//ec2-3-7-248-27.ap-south-1.compute.amazonaws.com";
+// const API_ROOT_PATH = "//ec2-3-7-248-27.ap-south-1.compute.amazonaws.com";
 
 export const createNewCivilTask = (requestBody, successFunction, failureFunction) => {
     makeAuthorizedServerRequest("/newciviltask", REQUEST_METHOD.POST, requestBody, successFunction, failureFunction)
@@ -19,7 +19,7 @@ export const getCivilTasks = (successFunction, failureFunction) => {
 const makeAuthorizedServerRequest = (requestURL, requestMethod, requestBody, successCallBackFunction, failureCallBackFunction, authToken) => {
     const requestConfiguration = {
         method: requestMethod,
-        url: API_ROOT_PATH + requestURL,
+        url: requestURL,
         data: requestBody,
         headers: {
             'Accept': 'application/json',
