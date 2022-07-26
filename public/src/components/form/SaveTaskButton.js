@@ -8,13 +8,15 @@ function SaveTaskButton() {
     const formData = useSelector((state) => state.form);
     const uploadImages = (images) => {
         const imageURLList = [];
+
         for (let i = 0; i < images.length; i++) {
-            console.log(images[i])
-            uploadFile(images[i], (response) => {
-                console.log(JSON.stringify(response.Location))
+            const successFunction = (response) => {
                 imageURLList.push(response.Location);
-                (i === images.length - 1) ? createTask(imageURLList) : null
-            })
+                if (i === images.length - 1) {
+                    createTask(imageURLList)
+                }
+            };
+            uploadFile(images[i], successFunction)
         }
     }
 

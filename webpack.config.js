@@ -4,7 +4,7 @@ module.exports = () => {
     return {
         mode: 'development',
         entry: {
-            app: __dirname + '/public/src/app/index.js'
+            app: __dirname + '/public/src/index.js'
         },
         output: {
             filename: '[name].js',
